@@ -1,0 +1,240 @@
+#container {
+    display: grid;
+    grid-template-columns: repeat(15,1fr);
+    grid-auto-rows: minmax(100px, auto);
+    max-width: 768px;
+    max-height: 661px;
+    grid-gap:10px;
+    margin: 0 auto;
+    position:relative;
+    padding: 10px;
+}
+
+
+.grid_header {
+    grid-column: 1/11;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+}
+
+.grid_header h1 {
+    float: left;
+    color: black;
+    font-size: 45px;
+}
+
+.dropdown {
+    background-color: #F1F1F1;
+    float: right;
+    width: 130px;
+    height: 40px;
+    padding-left: 10px;
+    border: 0;
+    box-shadow: 0px 4px 5px 1px rgb(0, 0, 0,0.2);
+}
+
+/* --------CASES------------ */
+/* --------CASES------------ */
+.cases_outer {
+    grid-column: 1/11;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.cases {
+    border-top: 8px solid rgb(223, 40, 40);
+}
+
+.cases_color {
+    color : rgb(223, 40, 40);
+    font-weight: bold;
+}
+.deaths {
+    border-top: 8px solid #f85002;
+}
+.deaths_color {
+    color : #f85002;
+    font-weight: bold;
+}
+
+.recovered {
+    border-top: 8px solid #7dd71d;
+}
+
+.recovered_color {
+    color: #7dd71d;
+    font-weight: bold;
+}
+
+.cases_internal {
+    box-sizing: border-box;
+    background-color: #F1F1F1;
+    border-radius: 5px;
+    min-width: 140px;
+    height: 90px;
+    font-size: large;
+    padding-left: 10px;
+    cursor: pointer;
+    box-shadow: 0px 8px 5px rgb(0, 0, 0,0.3);
+}
+
+.larger_width {
+    width: 140px;
+    font-size: medium;
+}
+h5 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: fit-content;
+    color: black;
+}
+h6 {
+    margin: 2px 0 0px;
+    width: fit-content;
+    color:Black;
+    font-size: 15px;
+}
+p{
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+}
+.right_box {
+    grid-row: 1/7;
+    grid-column: 11/16;
+    border-left: 1px solid gray;
+    padding-left: 10px;
+    height: auto;
+}
+
+.map {
+    grid-column: 1/11;
+    grid-row: 3/7;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/* --------SIDEBAR---------*/
+/* --------SIDEBAR---------*/
+
+.sidebar p{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 auto 10px;
+    color: black;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+
+  td {
+    padding: 5px 5px 0px 5px;
+    height: 30px;
+  }
+  
+  tr {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #5f5f5f;
+    color:white;
+  }
+  tr:nth-child(even) {
+    color:black;
+  }
+
+/* ----------------CHART------------- */
+/* ----------------CHART------------- */
+
+.chart_header {
+    margin:20px auto 30px;
+}
+
+/* ------------RESPONSIVE------------ */
+/* ------------RESPONSIVE------------ */
+
+@media only screen and (max-width: 720px) {
+    #container {
+        display: grid;
+        grid-template-columns: repeat(15,1fr);
+        grid-auto-rows: minmax(80px, auto);
+        max-width: 768px;
+        max-height: 661px;
+        grid-gap:10px;
+        margin: 0 auto;
+        position:relative;
+        padding: 10px;
+        padding-top: 0px;
+    }
+
+    .grid_header {
+        grid-column: 1/16;
+        grid-row: 1/2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 10px 0px 10px;
+        
+    }    
+
+    .grid_header h1 {
+        font-size: 30px;
+    }
+
+    .cases_outer {
+        grid-column: 1/16;
+        grid-row: 2/3;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 5px;
+    }
+    .cases_internal {
+        box-sizing: border-box;
+        background-color: #F1F1F1;
+        border-radius: 5px;
+        min-width: 140px;
+        height: 90px;
+        font-size: large;
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+    .map {
+        grid-column: 1/16;
+        grid-row: 3/7;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    .right_box {
+        grid-column: 1/16;
+        grid-row: 7/13;
+        border-left: 1px solid gray;
+        padding-left: 10px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .cases_internal {
+        box-sizing: border-box;
+        background-color: #F1F1F1;
+        border-radius: 5px;
+        min-width: 120px;
+        height: 90px;
+        font-size: medium;
+        padding-left: 10px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,36 @@
+.nav_outer {
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+    margin-bottom: 0px;
+}
+
+.nav_outer h3 {
+    font-size: 30px;
+}
+
+.nav_inner {
+    width: fit-content;
+    margin: 0 auto;
+    color: White;
+    padding: 10px 10px 10px 10px;
+}
+
+
+/* -----------BASE----------- */
+/* -----------BASE----------- */
+
+.base {
+    max-width: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 720px){
+    .nav_outer {
+        
+        margin-bottom: 0px;
+    }
+}
