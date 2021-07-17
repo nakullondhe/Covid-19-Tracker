@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-TO VIEW THIS PROJECT - http://bit.ly/cov19Tracker
+TO VIEW THIS PROJECT - https://covid19-tracker-c8f54.web.app/
 
 ## Available Scripts
 
