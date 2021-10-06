@@ -18,8 +18,8 @@ const SideBar = ({countries}) => {
         <div className="sidebar">
             <p>Cases By Country</p>
             <table>
-                {casesByCountry.slice(0,12).map( country => (
-                    <tr>
+                {casesByCountry.slice(0,12).map( (country, idx) => (
+                    <tr key={idx}>
                     <td>{country.country}</td>
                     <td>{country.cases}</td>
                     </tr>

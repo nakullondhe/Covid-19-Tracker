@@ -100,8 +100,8 @@ const Grid = () => {
         }
     }
 
-const changeCaseType = (e) => {
-    setCasesType(e.target.id);
+const changeCaseType = (caseType) => {
+    setCasesType(caseType);
 }
 
     return (
@@ -111,28 +111,28 @@ const changeCaseType = (e) => {
 
                 <select  className="dropdown"  onChange={changeSelect}>
                     <option value="world">Worldwide</option>
-                         {countries.map((country) => {
+                         {countries.map((country, idx) => {
                             return (
-                                <option value={country.value}>{country.name}</option>
+                                <option key={idx} value={country.value}>{country.name}</option>
                             )})}  
                 </select>
                     
             </header>
 
             <section className="cases_outer">
-                <div className={(casesType === "cases") ? "cases_internal cases" : "cases_internal"} id="cases" onClick={changeCaseType}>
+                <div className={(casesType === "cases") ? "cases_internal cases" : "cases_internal"} id="cases" onClick={() => changeCaseType("cases")}>
                         <h5>Total Cases</h5>
-                            <p class="today cases_color">{todayCases} +</p>
-                            <p class="total">{cases}</p>   
+                            <p className="today cases_color">{todayCases} +</p>
+                            <p className="total">{cases}</p>   
                 </div>
-                <div className={(casesType === "deaths") ? "cases_internal deaths" : "cases_internal"} id="deaths" onClick={changeCaseType}>
+                <div className={(casesType === "deaths") ? "cases_internal deaths" : "cases_internal"} id="deaths" onClick={() => changeCaseType("deaths")}>
                         <h5>Deaths</h5>
-                        <p class="today deaths_color">{todayDeaths} +</p>
-                        <p class="total">{deaths}</p>
+                        <p className="today deaths_color">{todayDeaths} +</p>
+                        <p className="total">{deaths}</p>
                 </div>
-                <div className={(casesType === "recovered") ? "cases_internal recovered" : "cases_internal"} id="recovered" onClick={changeCaseType}>
+                <div className={(casesType === "recovered") ? "cases_internal recovered" : "cases_internal"} id="recovered" onClick={() => changeCaseType("recovered")}>
                         <h6>Recovered</h6>
-                        <p class="recovered_color">{recovered}</p>
+                        <p className="recovered_color">{recovered}</p>
                         <h6>Active</h6>
                         <p>{active}</p>
                 </div>

@@ -19,8 +19,8 @@ const casesTypeColors = {
 
 //Draw Circles On Map with interactive ToolTip
 export const showDataOnMap = (data, casesType='cases') => (
-    data.map(country => (
-        <Circle center={[country.countryInfo.lat,country.countryInfo.long]} fillOpacity={0.1} 
+    data.map((country, idx) => (
+        <Circle key={idx} center={[country.countryInfo.lat,country.countryInfo.long]} fillOpacity={0.1} 
         color={casesTypeColors[casesType].hex}
         fillColor={casesTypeColors[casesType].hex}
         radius={Math.sqrt(country[casesType]) * casesTypeColors[casesType].multiplier}
